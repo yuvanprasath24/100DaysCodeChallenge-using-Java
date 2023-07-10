@@ -10,17 +10,20 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
-	    Scanner s=new Scanner(System.in);
-	    int t=s.nextInt();
-	    for (int i=1;i<=t ;i++ ){
-	        int n=s.nextInt();
-	        int x=s.nextInt();
-	        int z=n*x;
-	        if(z>9999&&z<=99999){
-	            System.out.println("YES");
-	        }else{
-	            System.out.println("NO");
-	        }
-	    } 
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		for (int i=1;i<=t ;i++ ){
+		    int n=s.nextInt();
+		    int x=s.nextInt();
+		    if(n>6){
+		        int z=n/6;
+		        if(n%6 !=0){
+		            z++;
+		        }
+		        System.out.println(z*x);
+		    }else{
+		        System.out.println(x);
+		    }
+		} 
 	}
 }
